@@ -1,0 +1,19 @@
+/* this is for small screens */
+@media screen and (max-width: 500px) {
+
+}
+
+/* this is for big screens */
+@media screen and (min-width: 500px) {
+
+}
+
+.nav {
+    width: 100vw;
+    height: 10%;
+    background-color: #479dff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+

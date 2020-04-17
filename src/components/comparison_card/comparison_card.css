@@ -1,0 +1,12 @@
+.comparison-card {
+    height: 200px;
+    width: 200px;
+    background: white;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.comparison-card:hover {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+}
