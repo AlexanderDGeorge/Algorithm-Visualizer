@@ -1,18 +1,36 @@
-import React from 'react';
-import ComparisonCard from '../comparison_card/comparison_card';
+import React, { useState } from 'react';
+import Card from '../comparison/card';
 import './sorts.css'
 
-const sorts = [
-    'Bubble Sort', 'Recursive Bubble', 'Selection Sort', 'Insertion Sort', 'Recursive Insertion Sort', 'Merge Sort', 'Iterative Merge Sort',
-    'Quick Sort', 'Iterative Quick Sort', 'Heap Sort', 'Counting Sort', 'Radix Sort', 'Bucket Sort', 'Shell Sort', 'Tim Sort', 'Comb Sort',
-    'Pigeonhole Sort', 'Cycle Sort', 'Cocktail Sort', 'Strand Sort', 'Bitonic Sort', 'Pancake Sort', 'Binary Insertion Sort', 
-    'Permutation Sort', 'Gnome Sort', 'Sleep Sort'
-];
+const sorts = {
+    'bubble sort': { 'best': 'n', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
+    'selection sort': { 'best': 'n^2', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
+    'insertion sort': { 'best': 'n', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
+    'merge sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'nlogn', 'space': 'n' },
+    'quick sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'n^2', 'space': 'nlogn' },
+    'heap sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'nlogn', 'space': '1' },
+    'counting sort': { 'best': 'n+k', 'avg': 'n+k', 'worst': 'n+k', 'space': 'k' },
+    'radix sort': { 'best': 'n*k', 'avg': 'n*k', 'worst': 'n*k', 'space': 'n+k' },
+}
 
 export default function Sorts() {
+    const [selected, setSelected] = useState([]);
+
+    function handleClick(val) {
+        if (selected.includes(val)) {
+            setSelected(selected.filter(ele => ele !== val));
+        } else {
+            setSelected([...selected, val])
+        }
+    }
+
+    console.log(selected);
+
     return (
         <div className="sorts">
-            {sorts.map((sort, i) => <ComparisonCard name={sort} key={i}/> )}
+            {Object.keys(sorts).map((sortname, i) => 
+                <Card info={sorts[sortname]} name={sortname} key={i} handleClick={val => handleClick(val)}/>
+            )}
         </div>
     )
 }

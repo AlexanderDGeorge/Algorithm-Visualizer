@@ -1,0 +1,31 @@
+.card {
+    height: 200px;
+    width: 200px;
+    background: white;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.card:hover {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.card-name {
+    text-align: center;
+    height: 20%;
+    border-bottom: 1px solid #999999;
+}
+
+.card-deets {
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    color: #333333;
+}
+
+.selected {
+    background-color: #ff6047;
+    opacity: 0.4;
+}
