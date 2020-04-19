@@ -6,6 +6,7 @@ import Search from './components/search/search';
 import CategoriesRouter from './components/categories/category_router';
 import Requests from './components/requests/requests';
 import Help from './components/help/help';
+import Visualize from './components/visualize/visualize';
 
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/categories" component={CategoriesRouter}/>
                 <Route path="/requests" component={Requests}/>
                 <Route path="/help" component={Help}/>
+                <Route path="/visualize" component={Visualize} />
                 <Route path="/" component={Home}/>
             </Switch>
         </HashRouter>

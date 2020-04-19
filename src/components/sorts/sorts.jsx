@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from '../comparison/card';
+import ComparisonHeader from '../comparison/comparison_header';
 import './sorts.css'
 
 const sorts = {
@@ -24,10 +25,9 @@ export default function Sorts() {
         }
     }
 
-    console.log(selected);
-
     return (
         <div className="sorts">
+            <ComparisonHeader selected={selected}/>
             {Object.keys(sorts).map((sortname, i) => 
                 <Card info={sorts[sortname]} name={sortname} key={i} handleClick={val => handleClick(val)}/>
             )}

@@ -29,3 +29,19 @@
     background-color: #ff6047;
     opacity: 0.4;
 }
+
+.comparison-header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visualize-button {
+    background: #e60000;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
