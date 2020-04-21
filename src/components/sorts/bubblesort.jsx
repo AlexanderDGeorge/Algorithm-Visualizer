@@ -15,6 +15,11 @@ export default function BubbleSort() {
         generateArray();
     }, [])
 
+    function handleRun() {
+        
+        bubbleSort();
+    }
+
     function generateArray() {
         let arr = [];
         for (let i = 0; i < length; i++) {
@@ -93,7 +98,7 @@ export default function BubbleSort() {
                 <button onClick={() => generateArray()}>
                     Generate Array
                 </button>
-                <button onClick={() => bubbleSort()}>
+                <button onClick={handleRun}>
                     Run
                 </button>
             </form>
