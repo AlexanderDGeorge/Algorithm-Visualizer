@@ -1,0 +1,10 @@
+.array {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.array-element {
+    border: 1px solid black;
+    margin: 1px;
+}

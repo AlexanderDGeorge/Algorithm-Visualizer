@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
-import { IoMdHome, IoMdHelp, IoMdMenu, IoMdArrowBack } from 'react-icons/io';
+import { IoMdHome, IoMdHelp, IoMdMenu, IoMdArrowBack, IoIosSpeedometer, IoMdExit, IoMdGitMerge } from 'react-icons/io';
 import { FiBarChart2 } from 'react-icons/fi';
 import { MdBubbleChart } from 'react-icons/md';
+import { GiStack, GiSelect } from 'react-icons/gi';
+import { TiSortNumerically } from 'react-icons/ti';
+import { FaSortNumericUp } from 'react-icons/fa';
 import './nav.css';
 
 export default function NavBar() {
@@ -92,14 +95,55 @@ function DropdownMenu() {
                     <DropdownItem 
                         goToMenu='main' 
                         leftIcon={<IoMdArrowBack />}
-                    >
-                        Back
+                    >   Back
                     </DropdownItem>
+
                     <DropdownItem 
                         leftIcon={<MdBubbleChart />}
-                        path='/sort'
-                    >
-                        Bubble Sort
+                        path='/bubblesort'
+                    >   Bubble Sort
+                    </DropdownItem>
+
+                    <DropdownItem
+                        leftIcon={<GiSelect />}
+                        path='/selectionsort'
+                    >   Selection Sort
+                    </DropdownItem>
+
+                    <DropdownItem
+                        leftIcon={<IoMdExit />}
+                        path='/insertionsort'
+                    >   Insertion Sort
+                    </DropdownItem>
+
+                    <DropdownItem
+                        leftIcon={<IoMdGitMerge />}
+                        path='/mergesort'
+                    >   Merge Sort
+                    </DropdownItem>
+
+                    <DropdownItem
+                        leftIcon={<IoIosSpeedometer />}
+                        path='/quicksort'
+                    >   Quick Sort
+                    </DropdownItem>
+
+                    <DropdownItem
+                        leftIcon={<GiStack />}
+                        path='/heapsort'
+                    >   Heap Sort
+                    </DropdownItem>
+
+                    <DropdownItem
+                        leftIcon={<TiSortNumerically />}
+                        path='/countingsort'
+                    >   Counting Sort
+                    </DropdownItem>
+
+                    <DropdownItem
+                        leftIcon={<FaSortNumericUp />}
+                        path='/radixsort'
+                    >   Radix Sort
                     </DropdownItem>
                 </div>
             </CSSTransition>
