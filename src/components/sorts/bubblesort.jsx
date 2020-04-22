@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from '../nav/navbar';
 import './sort.css';
+import Sort from './sort';
 
 export default function BubbleSort() {
 
@@ -77,9 +77,9 @@ export default function BubbleSort() {
         }
     }
 
-    return (
+    function BubbleSortAnimation() {
+        return (
         <div className='sort'>
-            <NavBar />
             <form className='sort-controls'>
                 <label>Array Size:</label>
                 <input 
@@ -111,6 +111,8 @@ export default function BubbleSort() {
                 ))}
             </div> 
         </div>
+    )}
+    return (
+        <Sort children={<BubbleSortAnimation/>} />
     )
-
 }

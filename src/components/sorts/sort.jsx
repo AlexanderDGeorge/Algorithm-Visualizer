@@ -8,3 +8,16 @@
 //     'counting sort': { 'best': 'n+k', 'avg': 'n+k', 'worst': 'n+k', 'space': 'k' },
 //     'radix sort': { 'best': 'n*k', 'avg': 'n*k', 'worst': 'n*k', 'space': 'n+k' },
 // }
+
+import React from 'react';
+import NavBar from '../nav/navbar';
+
+export default function Sort(props) {
+
+    return (
+        <div>
+            <NavBar />
+            {props.children}
+        </div>
+    )
+}
