@@ -1,3 +1,7 @@
+:root {
+
+}
+
 .sort {
     height: 100vh;
     width: 100vw;
@@ -30,7 +34,7 @@
     font-size: 14px;
     border: 1px solid #999;
     background: #999;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     color: var(--text-color);
     margin: 0 10px;
 }
@@ -43,8 +47,14 @@
     display: flex;
     align-items: flex-end;
     padding: 20px;
+    overflow-y: scroll;
+}
+
+.element {
+    text-align: center;
 }
 
 .element div {
     background-color: yellow;
+    border: 1px solid #999999;
 }
