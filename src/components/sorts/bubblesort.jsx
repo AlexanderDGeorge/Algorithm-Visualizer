@@ -4,19 +4,19 @@ import Sort from './sort';
 
 export default function BubbleSort() {
 
-    const container = document.querySelector('.array')
-
+    let container;
+    
     const [length, setLength] = useState(10);
     const [array, setArray] = useState([]);
     const [delay, setDelay] = useState(1);
     const [run, setRun] = useState(false);
-
+    
     useEffect(() => {
         generateArray();
     }, [])
 
     function handleRun() {
-        
+        container = document.querySelector('.array');
         bubbleSort();
     }
 
@@ -42,8 +42,8 @@ export default function BubbleSort() {
       
           window.requestAnimationFrame(function() {
             setTimeout(() => {
-              container.insertBefore(el2, el1);
-              resolve();
+                container.insertBefore(el2, el1);
+                resolve();
             }, 250);
           });
         });
@@ -112,6 +112,7 @@ export default function BubbleSort() {
             </div> 
         </div>
     )}
+    
     return (
         <Sort children={<BubbleSortAnimation/>} />
     )
