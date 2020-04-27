@@ -67,7 +67,7 @@ export default function BubbleSort(props) {
         return (
         <div className='array'>
             {array.map((element, i) => (
-                <div className='element'>
+                <div className='element' key={i}>
                     <label>{element}</label>
                     <div style={{ height: element * 3, width: 30, x: i * 30 }}/>
                 </div>
@@ -88,6 +88,7 @@ export default function BubbleSort(props) {
                 run={handleRun}
             />
             <BubbleSortAnimation />
+            <BubbleSortInfo />
         </div>
     )
 }
@@ -95,7 +96,11 @@ export default function BubbleSort(props) {
 function BubbleSortInfo() {
     return (
         <div className='sort-info'>
-            
+            <h1>Bubble Sort</h1>
+            <h2>Time Complexity:</h2>
+            <p>Best: O(n)</p>
+            <p>Average: O(n²)</p>
+            <p>Worst: O(n²)</p>
         </div>
     )
 }
