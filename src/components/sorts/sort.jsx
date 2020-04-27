@@ -11,12 +11,14 @@
 
 import React from 'react';
 import NavBar from '../nav/navbar';
+import SortOptions from './sort-options';
 
 export default function Sort(props) {
 
     return (
         <div>
             <NavBar />
+            <SortOptions />
             {props.children}
         </div>
     )

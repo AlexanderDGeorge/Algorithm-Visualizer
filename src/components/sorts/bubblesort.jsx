@@ -1,32 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './sort.css';
-import Sort from './sort';
+import NavBar from '../nav/navbar';
+import SortOptions from './sort-options';
 
-export default function BubbleSort() {
+export default function BubbleSort(props) {
 
     let container;
-    
     const [length, setLength] = useState(10);
+    const [delay, setDelay] = useState(5.00);
     const [array, setArray] = useState([]);
-    const [delay, setDelay] = useState(1);
-    const [run, setRun] = useState(false);
-    
-    useEffect(() => {
-        generateArray();
-    }, [])
 
     function handleRun() {
         container = document.querySelector('.array');
         bubbleSort();
-    }
-
-    function generateArray() {
-        let arr = [];
-        for (let i = 0; i < length; i++) {
-            const value = Math.floor(Math.random() * 100);
-            arr.push(value);
-        }
-        setArray(arr);
     }
 
     function swap(el1, el2) {
@@ -44,7 +30,7 @@ export default function BubbleSort() {
             setTimeout(() => {
                 container.insertBefore(el2, el1);
                 resolve();
-            }, 250);
+            }, delay * 100);
           });
         });
     }
@@ -59,7 +45,7 @@ export default function BubbleSort() {
                 await new Promise(resolve => 
                     setTimeout(() => {
                         resolve()
-                    }, delay)
+                    }, delay * 100)
                 )
 
                 const value1 = Number(elements[j].childNodes[0].innerHTML);
@@ -79,41 +65,29 @@ export default function BubbleSort() {
 
     function BubbleSortAnimation() {
         return (
-        <div className='sort'>
-            <form className='sort-controls'>
-                <label>Array Size:</label>
-                <input 
-                    type="number"
-                    value={length}
-                    onChange={e => setLength(e.target.value)}
-                    placeholder={length}
-                />
-                <label>Speed:</label>
-                <input 
-                    type="number"
-                    value={delay}
-                    onChange={e => setDelay(e.target.value)}
-                    placeholder={delay}
-                />
-                <button onClick={() => generateArray()}>
-                    Generate Array
-                </button>
-                <button onClick={handleRun}>
-                    Run
-                </button>
-            </form>
-            <div className='array'>
-                {array.map((element, i) => (
-                    <div className='element'>
-                        <label>{element}</label>
-                        <div style={{ height: element * 3, width: 30, x: i * 30 }}/>
-                    </div>
-                ))}
-            </div> 
-        </div>
+        <div className='array'>
+            {array.map((element, i) => (
+                <div className='element'>
+                    <label>{element}</label>
+                    <div style={{ height: element * 3, width: 30, x: i * 30 }}/>
+                </div>
+            ))}
+        </div> 
     )}
     
     return (
-        <Sort children={<BubbleSortAnimation/>} />
+        <div>
+            <NavBar />
+            <SortOptions 
+                length={length} 
+                setLength={val => setLength(val)}
+                delay={delay}
+                setDelay={val => setDelay(val)}
+                array={array}
+                setArray={val => setArray(val)}
+                run={handleRun}
+            />
+            <BubbleSortAnimation />
+        </div>
     )
 }

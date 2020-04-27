@@ -15,6 +15,17 @@
     border-bottom: var(--border);
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.sort-control button {
+    outline: none;
 }
 
 .sort-controls label {
