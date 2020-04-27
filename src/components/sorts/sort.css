@@ -1,5 +1,7 @@
 :root {
-
+    --red: #ff5f3f;
+    --green: #5fff3f;
+    --blue: #3f7fff;
 }
 
 .sort {
@@ -8,7 +10,7 @@
     background: #cccccc;
 }
 
-.sort-controls {
+.sort-options {
     height: var(--nav-size);
     background-color: var(--bg);
     padding: 0 1rem;
@@ -18,21 +20,21 @@
     justify-content: space-evenly;
 }
 
-.sort-control {
+.sort-option {
     display: flex;
     align-items: center;
     color: white;
 }
 
-.sort-control button {
+.sort-option button {
     outline: none;
 }
 
-.sort-controls label {
+.sort-options label {
     color: var(--text-color);
 }
 
-.sort-controls input {
+.sort-options input {
     font-size: 16px;
     background: transparent;
     color: var(--text-color);
@@ -40,7 +42,7 @@
     text-align: center;
 }
 
-.sort-controls button {
+.sort-options button {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #999;
@@ -50,7 +52,7 @@
     margin: 0 10px;
 }
 
-.sort-controls button:hover {
+.sort-options button:hover {
     color: white;
 }
 
@@ -66,6 +68,6 @@
 }
 
 .element div {
-    background-color: yellow;
+    background: linear-gradient(180deg, var(--red), #ff2e09);
     border: 1px solid #999999;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './sort.css';
 import NavBar from '../nav/navbar';
 import SortOptions from './sort-options';
@@ -76,7 +76,7 @@ export default function BubbleSort(props) {
     )}
     
     return (
-        <div>
+        <div className='sort'>
             <NavBar />
             <SortOptions 
                 length={length} 
@@ -88,6 +88,14 @@ export default function BubbleSort(props) {
                 run={handleRun}
             />
             <BubbleSortAnimation />
+        </div>
+    )
+}
+
+function BubbleSortInfo() {
+    return (
+        <div className='sort-info'>
+            
         </div>
     )
 }

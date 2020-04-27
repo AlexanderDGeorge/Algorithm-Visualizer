@@ -16,7 +16,7 @@ import SortOptions from './sort-options';
 export default function Sort(props) {
 
     return (
-        <div>
+        <div className='sort'>
             <NavBar />
             <SortOptions />
             {props.children}

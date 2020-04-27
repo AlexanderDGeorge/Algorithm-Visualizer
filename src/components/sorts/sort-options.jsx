@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 export default function SortOptions(props) {
 
@@ -21,19 +21,15 @@ export default function SortOptions(props) {
         setArray(arr);
     }
 
-    function handleRun() {
-        
-    }
-
     return (
-        <form className='sort-controls'>
-            <div className='sort-control'>
+        <form className='sort-options'>
+            <div className='sort-option'>
                 <p>Array Size:</p>
                 <button onClick={() => setLength(length - 1)}>-</button>
                 <p>{length}</p>
                 <button onClick={() => setLength(length + 1)}>+</button>
             </div>
-            <div className='sort-control'>
+            <div className='sort-option'>
                 <p>Speed:</p>
                 <button onClick={() => setDelay(delay - 0.25)}>-</button>
                 <p>{delay.toFixed(2)}</p>
