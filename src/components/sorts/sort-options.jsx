@@ -4,10 +4,6 @@ export default function SortOptions(props) {
 
     const { length, setLength, delay, setDelay, setArray, run } = props;
 
-    // const [length, setLength] = useState(10);
-    // const [delay, setDelay] = useState(1.00);
-    // const [array, setArray] = useState([]);
-
     useEffect(() => {
         generateArray();
     }, [])

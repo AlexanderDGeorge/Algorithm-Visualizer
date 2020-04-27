@@ -1,19 +1,15 @@
-// const sorts = {
-//     'bubble sort': { 'best': 'n', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
-//     'selection sort': { 'best': 'n^2', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
-//     'insertion sort': { 'best': 'n', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
-//     'merge sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'nlogn', 'space': 'n' },
-//     'quick sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'n^2', 'space': 'nlogn' },
-//     'heap sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'nlogn', 'space': '1' },
-//     'counting sort': { 'best': 'n+k', 'avg': 'n+k', 'worst': 'n+k', 'space': 'k' },
-//     'radix sort': { 'best': 'n*k', 'avg': 'n*k', 'worst': 'n*k', 'space': 'n+k' },
-// }
-
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavBar from '../nav/navbar';
 import SortOptions from './sort-options';
-import bubblesort from './bubblesort';
+import bubblesort from './bubblesort'
+import selectionsort from './selectionsort';
+import insertionsort from './insertionsort';
+import mergesort from './mergesort';
+import quicksort from './quicksort';
+import heapsort from './heapsort';
+import countingsort from './countingsort';
+import radixsort from './radixsort';
 import './sort.css';
 
 export default function Sort() {
@@ -23,7 +19,6 @@ export default function Sort() {
     const [array, setArray] = useState([]);
     const location = useLocation();
     const pathname = location.pathname.slice(7);
-    console.log(pathname);    
 
     function handleRun() {
         switch (pathname) {
@@ -31,18 +26,25 @@ export default function Sort() {
                 bubblesort(delay);
                 break;
             case 'selectionsort':
+                selectionsort(delay);
                 break;
             case 'insertionsort':
+                insertionsort(delay);
                 break;
             case 'mergesort':
+                mergesort(delay);
                 break;
             case 'quicksort':
+                quicksort(delay);
                 break;
             case 'heapsort':
+                heapsort(delay);
                 break;
             case 'countingsort':
+                countingsort(delay);
                 break;
             case 'radixsort':
+                radixsort(delay);
                 break;
             default:
                 bubblesort(delay);
@@ -54,10 +56,9 @@ export default function Sort() {
             <NavBar />
             <SortOptions 
                 length={length}
-                setLength={val => setLength(val)}
                 delay={delay}
+                setLength={val => setLength(val)}
                 setDelay={val => setDelay(val)}
-                array={array}
                 setArray={val => setArray(val)}
                 run={handleRun}
             />
@@ -72,3 +73,14 @@ export default function Sort() {
         </div>
     )
 }
+
+// const sorts = {
+//     'bubble sort': { 'best': 'n', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
+//     'selection sort': { 'best': 'n^2', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
+//     'insertion sort': { 'best': 'n', 'avg': 'n^2', 'worst': 'n^2', 'space': '1' },
+//     'merge sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'nlogn', 'space': 'n' },
+//     'quick sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'n^2', 'space': 'nlogn' },
+//     'heap sort': { 'best': 'nlogn', 'avg': 'nlogn', 'worst': 'nlogn', 'space': '1' },
+//     'counting sort': { 'best': 'n+k', 'avg': 'n+k', 'worst': 'n+k', 'space': 'k' },
+//     'radix sort': { 'best': 'n*k', 'avg': 'n*k', 'worst': 'n*k', 'space': 'n+k' },
+// }
