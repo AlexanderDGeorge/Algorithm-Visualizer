@@ -100,49 +100,49 @@ function DropdownMenu() {
 
                     <DropdownItem 
                         leftIcon={<MdBubbleChart />}
-                        path='/bubblesort'
+                        path='/sorts/bubblesort'
                     >   Bubble Sort
                     </DropdownItem>
 
                     <DropdownItem
                         leftIcon={<GiSelect />}
-                        path='/selectionsort'
+                        path='/sorts/selectionsort'
                     >   Selection Sort
                     </DropdownItem>
 
                     <DropdownItem
                         leftIcon={<IoMdExit />}
-                        path='/insertionsort'
+                        path='/sorts/insertionsort'
                     >   Insertion Sort
                     </DropdownItem>
 
                     <DropdownItem
                         leftIcon={<IoMdGitMerge />}
-                        path='/mergesort'
+                        path='/sorts/mergesort'
                     >   Merge Sort
                     </DropdownItem>
 
                     <DropdownItem
                         leftIcon={<IoIosSpeedometer />}
-                        path='/quicksort'
+                        path='/sorts/quicksort'
                     >   Quick Sort
                     </DropdownItem>
 
                     <DropdownItem
                         leftIcon={<GiStack />}
-                        path='/heapsort'
+                        path='/sorts/heapsort'
                     >   Heap Sort
                     </DropdownItem>
 
                     <DropdownItem
                         leftIcon={<TiSortNumerically />}
-                        path='/countingsort'
+                        path='/sorts/countingsort'
                     >   Counting Sort
                     </DropdownItem>
 
                     <DropdownItem
                         leftIcon={<FaSortNumericUp />}
-                        path='/radixsort'
+                        path='/sorts/radixsort'
                     >   Radix Sort
                     </DropdownItem>
                 </div>
