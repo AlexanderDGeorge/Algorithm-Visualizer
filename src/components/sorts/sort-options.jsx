@@ -25,15 +25,15 @@ export default function SortOptions(props) {
                 <p>{length}</p>
                 <button onClick={() => setLength(length + 1)}>+</button>
             </div>
+            <button onClick={() => generateArray()}>
+                Generate Array
+            </button>
             <div className='sort-option'>
                 <p>Speed:</p>
                 <button onClick={() => setDelay(delay - 0.25)}>-</button>
                 <p>{delay.toFixed(2)}</p>
                 <button onClick={() => setDelay(delay + 0.25)}>+</button>
             </div>
-            <button onClick={() => generateArray()}>
-                Generate Array
-            </button>
             <button onClick={run}>
                 Run
             </button>

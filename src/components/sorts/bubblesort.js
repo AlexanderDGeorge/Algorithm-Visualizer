@@ -17,7 +17,7 @@ export default async function bubbleSort(delay) {
             setTimeout(() => {
                 container.insertBefore(el2, el1);
                 resolve();
-            }, 100);
+            }, delay * 1000);
           });
         });
     }

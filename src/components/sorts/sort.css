@@ -57,10 +57,14 @@
 }
 
 .array {
+    height: 380px;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
+    justify-content: center;
     align-items: flex-end;
     padding: 20px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .element {
@@ -68,4 +72,5 @@
     background: red;
     border: 1px solid black;
     padding-bottom: 15px;
+    margin: 1px;
 }
