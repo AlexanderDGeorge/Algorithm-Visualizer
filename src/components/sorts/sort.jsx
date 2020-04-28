@@ -70,7 +70,7 @@ export default function Sort() {
                 {array.map((element, i) => (
                     <div 
                         className='element' key={i} 
-                        style={{ height: element * 3, width: 30, x: i * 30 }}>
+                        style={{ height: element * 3, x: i * 30 }}>
                         {element}
                     </div>
                 ))}

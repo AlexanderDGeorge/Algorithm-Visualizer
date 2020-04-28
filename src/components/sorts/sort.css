@@ -64,13 +64,15 @@
     justify-content: center;
     align-items: flex-end;
     padding: 20px;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 }
 
 .element {
     text-align: center;
     background: red;
-    border: 1px solid black;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     margin: 1px;
+    width: 40px;
+    font-size: 18px;
+    font-weight: 200;
 }
