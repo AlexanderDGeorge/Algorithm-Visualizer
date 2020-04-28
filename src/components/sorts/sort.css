@@ -65,9 +65,7 @@
 
 .element {
     text-align: center;
-}
-
-.element div {
-    background: linear-gradient(180deg, var(--red), #ff2e09);
-    border: 1px solid #999999;
+    background: red;
+    border: 1px solid black;
+    padding-bottom: 15px;
 }
