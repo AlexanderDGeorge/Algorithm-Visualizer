@@ -25,20 +25,22 @@ export default async function selectionSort(delay) {
     for (let i = 0; i < elements.length; i++) {
         let min = i;
         for (let j = i + 1; j < elements.length; j++) {
-            elements[j].style.background = '#FF4949';
-            elements[min].style.background = '#FF4949';
+            elements[min].style.background = 'green';
+            elements[j].style.background = 'green';
 
-            await new Promise(resolve => 
-                setTimeout(() => {
-                    resolve()
-                }, delay * 1000)
-            )
+            // await new Promise(resolve => 
+            //     setTimeout(() => {
+            //         resolve()
+            //     }, delay * 1000)
+            // )
 
             const value1 = Number(elements[j].childNodes[0].innerHTML);
             const value2 = Number(elements[min].childNodes[0].innerHTML);
 
-            if (value2 > value1) {
+            if (value1 < value2) {
+                elements[min].style.background = 'red';
                 min = j;
+                elements[min].style.background = 'green';
             }
         }
         if (min !== i) {

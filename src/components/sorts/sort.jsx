@@ -15,7 +15,7 @@ import './sort.css';
 export default function Sort() {
 
     const [length, setLength] = useState(10);
-    const [delay, setDelay] = useState(5.00);
+    const [delay, setDelay] = useState(1.00);
     const [array, setArray] = useState([]);
     const location = useLocation();
     const pathname = location.pathname.slice(7);
@@ -64,9 +64,8 @@ export default function Sort() {
             />
             <div className='array'>
                 {array.map((element, i) => (
-                    <div className='element' key={i}>
-                        <label>{element}</label>
-                        <div style={{ height: element * 3, width: 30, x: i * 30 }}/>
+                    <div className='element' key={i} style={{ height: element * 3, width: 30, x: i * 30 }}>
+                        {element}
                     </div>
                 ))}
             </div> 
