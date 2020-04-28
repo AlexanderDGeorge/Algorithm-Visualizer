@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavBar from '../nav/navbar';
 import SortOptions from './sort-options';
@@ -19,6 +19,10 @@ export default function Sort() {
     const [array, setArray] = useState([]);
     const location = useLocation();
     const pathname = location.pathname.slice(7);
+
+    useEffect(() => {
+      document.title = `Algorithm Visualizer - ${pathname}`;
+    }, [pathname])
 
     function handleRun() {
         switch (pathname) {
