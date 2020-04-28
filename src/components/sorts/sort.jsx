@@ -58,6 +58,16 @@ export default function Sort() {
     return (
         <div className='sort'>
             <NavBar />
+            <h1 className='sort-title'>{pathname}</h1>
+            <div className='array'>
+                {array.map((element, i) => (
+                    <div 
+                    className='element' key={i} 
+                    style={{ height: element * 3, x: i * 30 }}>
+                        {element}
+                    </div>
+                ))}
+            </div> 
             <SortOptions 
                 length={length}
                 delay={delay}
@@ -66,15 +76,6 @@ export default function Sort() {
                 setArray={val => setArray(val)}
                 run={handleRun}
             />
-            <div className='array'>
-                {array.map((element, i) => (
-                    <div 
-                        className='element' key={i} 
-                        style={{ height: element * 3, x: i * 30 }}>
-                        {element}
-                    </div>
-                ))}
-            </div> 
         </div>
     )
 }

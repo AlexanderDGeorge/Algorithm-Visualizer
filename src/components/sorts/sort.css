@@ -11,6 +11,9 @@
 }
 
 .sort-options {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     height: var(--nav-size);
     background-color: var(--bg);
     padding: 0 1rem;
