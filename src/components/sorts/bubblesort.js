@@ -23,8 +23,8 @@ export default async function bubbleSort(delay) {
     }
     for (let i = 0; i < elements.length; i++) {
         for (let j = 0; j < elements.length - i - 1; j++) {
-            elements[j].style.background = '#FF4949';
-            elements[j + 1].style.background = '#FF4949';
+            elements[j].style.background = 'blue';
+            elements[j + 1].style.background = 'blue';
 
             await new Promise(resolve => 
                 setTimeout(() => {
@@ -32,17 +32,14 @@ export default async function bubbleSort(delay) {
                 }, delay * 1000)
             )
 
-            const value1 = Number(elements[j].childNodes[0].innerHTML);
-            const value2 = Number(elements[j + 1].childNodes[0].innerHTML);
-
-            if (value1 > value2) {
+            if (Number(elements[j].innerHTML) > Number(elements[j + 1].innerHTML)) {
                 await swap(elements[j], elements[j + 1]);
                 elements = document.querySelectorAll('.element');
             }
 
-            elements[j].style.background = '#58B7FF';
-            elements[j + 1].style.background = '#58B7FF';
+            elements[j].style.background = 'red';
+            elements[j + 1].style.background = 'red';
         }
-        elements[elements.length - i - 1].style.background = '#13CE66';
+        elements[elements.length - i - 1].style.background = 'green';
     }
 }
