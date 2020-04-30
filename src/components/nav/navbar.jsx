@@ -13,7 +13,7 @@ export default function NavBar() {
     return (
         <nav className='navbar'>
             <Link to="/">
-                JavaScript Visualizer
+                <h1>Algorithm Visualizer</h1>
             </Link>
 
             <ul className='navbar-nav'>
