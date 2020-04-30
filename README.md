@@ -1,4 +1,4 @@
-# Algo-Visualizer
+# Algorithm-Visualizer
 IN PROGRESS
 Web application to visualize the differences between different sorts, data structures, and built-in methods in javascript.
 
